@@ -29,9 +29,10 @@ const sql = require("sqlite");
 client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('-all')){
- if(!message.author.id === '335027415619338240') return;
-message.channel.sendMessage(' جار ارسال الرسالة | ✅')
+if (message.content.startsWith('>bcall')){
+ if (message.author.id !== '349616310734553088') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
+ if(!message.author.id === '349616310734553088') return;
+message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
