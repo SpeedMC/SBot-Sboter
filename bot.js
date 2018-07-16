@@ -26,6 +26,32 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={};
 
+client.on('message', msg => {
+	var prefix = "-";
+  if (msg.author.bot) return;
+  if (!msg.content.startsWith(prefix)) return;
+  let command = msg.content.split(" ")[0];
+  command = command.slice(prefix.length);
+  let args = msg.content.split(" ").slice(1);
+
+    if(command === "clr") {
+        const emoji = client.emojis.find("name", "wastebasket")
+    let textxt = args.slice(0).join("");
+    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
+    if (textxt == "") {
+        msg.delete().then
+    msg.channel.send("***```Supply A Number 👌```***").then(m => m.delete(3000));
+} else {
+    msg.delete().then
+    msg.delete().then
+    msg.channel.bulkDelete(textxt);
+        msg.channel.send("```Number of messages that have been cleared: " + textxt + "\n```").then(m => m.delete(3000));
+        }    
+    }
+}
+});
+
+
 client.on("message", message => {
 	var prefix = "-";
  if (message.content === "-help") {
@@ -1573,31 +1599,6 @@ client.on('message', message => {
         })
         })
     }
-});
-
- client.on('message', msg => {
-	var prefix = "-";
-  if (msg.author.bot) return;
-  if (!msg.content.startsWith(prefix)) return;
-  let command = msg.content.split(" ")[0];
-  command = command.slice(prefix.length);
-  let args = msg.content.split(" ").slice(1);
-
-    if(command === "clr") {
-        const emoji = client.emojis.find("name", "wastebasket")
-    let textxt = args.slice(0).join("");
-    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
-    if (textxt == "") {
-        msg.delete().then
-    msg.channel.send("***```Supply A Number 👌```***").then(m => m.delete(3000));
-} else {
-    msg.delete().then
-    msg.delete().then
-    msg.channel.bulkDelete(textxt);
-        msg.channel.send("```Number of messages that have been cleared: php\n " + textxt + "\n```").then(m => m.delete(3000));
-        }    
-    }
-}
 });
 
 client.on('message', message => { 
