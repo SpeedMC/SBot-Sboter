@@ -1575,8 +1575,7 @@ client.on('message', message => {
     }
 });
 
- 
-client.on('message', msg => {
+ client.on('message', msg => {
 	var prefix = "-";
   if (msg.author.bot) return;
   if (!msg.content.startsWith(prefix)) return;
@@ -1590,20 +1589,20 @@ client.on('message', msg => {
     if(msg.member.hasPermission("MANAGE_MESSAGES")) {
     if (textxt == "") {
         msg.delete().then
-    msg.channel.send("***```ضع عدد الرسائل التي تريد مسحها 👌```***").then(m => m.delete(3000));
+    msg.channel.send("***```Supply A Number 👌```***").then(m => m.delete(3000));
 } else {
     msg.delete().then
     msg.delete().then
     msg.channel.bulkDelete(textxt);
-        msg.channel.send("```php\nعدد الرسائل التي تم مسحها: " + textxt + "\n```").then(m => m.delete(3000));
+        msg.channel.send("```Number of messages that have been cleared: php\n " + textxt + "\n```").then(m => m.delete(3000));
         }    
     }
 }
 });
 
 client.on('message', message => { 
-let PREFIX = '-'
-    if (message.content.startsWith(PREFIX + 'emojilist')) {
+let prefix = '-'
+    if (message.content.startsWith(prefix + 'emojilist')) {
 
         const List = message.guild.emojis.map(e => e.toString()).join(" ");
 
@@ -1618,6 +1617,7 @@ let PREFIX = '-'
 });
 
 client.on('message',function(message) {
+	let prefix = "-";
 let args = message.content.split(" ").slice(1).join(" ");
 if(message.content.startsWith(prefix + "say")) {
 if(!args) return;
