@@ -146,7 +146,7 @@ client.on('message', msg => {
     msg.delete().then
     msg.delete().then
     msg.channel.bulkDelete(textxt);
-        msg.channel.send("```Cleard: " + textxt + "\n Messages"```).then(m => m.delete(3000));
+        msg.channel.send("```Cleard: " + textxt + "\n Messages```").then(m => m.delete(3000));
         }    
     }
 }
