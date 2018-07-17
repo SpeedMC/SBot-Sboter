@@ -26,11 +26,7 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={};
 
-const Discord = require("discord.js");
-const client = new Discord.Client();
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
+
 /*جميع الحقوق محفوظهه لريبل ولسيرفر كودز
 رآح يرسل للأونر تحذير + م يتطلب ملفات سويته لكم داتا مؤقت
 سو روم بأسم log 
