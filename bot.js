@@ -2286,16 +2286,6 @@ client.on('message', message => {
        }
    });
  
-
-client.on('message', message => {
-    if(message.content.includes('discord.gg')){
-        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
-        message.delete()
-    return message.reply(`** Not allowed to advertising Here :angry: ! **`)
-    }
-}
-});
- 
 client.on('message', message => {
     if (message.content.startsWith("-avatar")) {
 if(!message.channel.guild) return;
