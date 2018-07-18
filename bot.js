@@ -27,14 +27,7 @@ const sql = require("sqlite");
 ,spee={};
 
 
-/*جميع الحقوق محفوظهه لريبل ولسيرفر كودز
-رآح يرسل للأونر تحذير + م يتطلب ملفات سويته لكم داتا مؤقت
-سو روم بأسم log 
-أو غيره من الكود عشان يرسل هنا التحذير
-nvm i 10 
-nvm use 10
-npm i discord.js
-*/
+
 var guilds = {};
 client.on('guildBanAdd', function(guild) {
             const rebellog = client.channels.find("name", "log"),
